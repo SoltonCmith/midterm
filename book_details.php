@@ -7,9 +7,9 @@ if($bookID == 0) {
     $isAddition = 1;
 } else {
     $isAddition = 0;
-    $query = "SELECT * FROM books WHERE Id = :book_id "; // SQL statement
+    $query = "SELECT * FROM books WHERE Id = :book_ID "; // SQL statement
     $statement = $db->prepare($query); // encapsulate the sql statement
-    $statement->bindValue(':book_id', $bookID);
+    $statement->bindValue(':book_ID', $bookID);
     $statement->execute(); // run on the db server
     $book = $statement->fetch(); // returns only one record
     $statement->closeCursor(); // close the connection

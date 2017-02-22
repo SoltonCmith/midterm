@@ -20,7 +20,7 @@ $statement = $db->prepare($query); // encapsulate the sql statement
 // else if user is Updating an Existing Book
 else {
 $bookID = filter_input(INPUT_POST, "IDTextField");
-
+echo $bookID;
 /*//////////////////////*/
 /* FIX THIS MYSQL QUERY */
 /*//////////////////////*/
