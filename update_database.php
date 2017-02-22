@@ -39,5 +39,5 @@ $statement->execute(); // run on the db server
 $statement->closeCursor(); // close the connection
 
 // redirect to index page
-header('Location: index.php');
+//header('Location: index.php');
 ?>
