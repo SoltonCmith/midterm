@@ -55,7 +55,7 @@ $statement->closeCursor(); // close the connection
 
                             <td><a class="btn btn-primary" href="book_details.php"> <i class="fa fa-plus"></i> EDIT</a></td>
 
-                            <td> <!-- Add the Delete Button here --></td>
+                            <td><a class="btn btn-primary" href="book_delete.php"> <i class="fa fa-plus"></i> DELETE</a></td>
                         </tr>
                     <?php endforeach; ?>
             </table>
