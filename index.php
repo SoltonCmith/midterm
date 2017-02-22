@@ -53,14 +53,12 @@ $statement->closeCursor(); // close the connection
                             <!-- MODIFY SECTION BELOW -->
                             <!-- //////////////////// -->
 
-                            <td> <!-- Add the Edit Button here --> </td>
+                            <td><a class="btn btn-primary" href="book_details.php"> <i class="fa fa-plus"></i> EDIT</a></td>
 
                             <td> <!-- Add the Delete Button here --></td>
                         </tr>
                     <?php endforeach; ?>
-
             </table>
-
         </div>
     </div>
 </div>
