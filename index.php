@@ -52,7 +52,7 @@ $statement->closeCursor(); // close the connection
                             <!-- //////////////////// -->
 
                             <td><a class="btn btn-primary" href="book_details.php?bookID=<?php echo $book['Id']?>"> <i class="fa fa-plus"></i> EDIT</a></td>
-                            <td><a class="btn btn-danger" href="book_delete.php?bookID"<?php echo $book['Id']?> DELETE</a></td>
+                            <td><a class="btn btn-danger" href="book_delete.php?bookID=<?php echo $book['Id']?>"> DELETE</a></td>
                         </tr>
                     <?php endforeach; ?>
             </table>
