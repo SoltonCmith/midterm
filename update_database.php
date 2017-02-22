@@ -20,14 +20,14 @@ $statement = $db->prepare($query); // encapsulate the sql statement
 // else if user is Updating an Existing Book
 else {
 $bookID = filter_input(INPUT_POST, "IDTextField");
-echo $bookID;
+
 /*//////////////////////*/
 /* FIX THIS MYSQL QUERY */
 /*//////////////////////*/
 
-$query = "UPDATE books SET Title = :book_title, Price = :book_price, Author = :book_author, Genre = book_genre WHERE Id = :book_ID ";
+$query = "UPDATE books SET Title = :book_title, Price = :book_price, Author = :book_author, Genre = book_genre WHERE ID = :book_ID ";
 $statement = $db->prepare($query); // encapsulate the sql statement
-$statement->bindValue(':book_id', $bookID);
+$statement->bindValue(':book_ID', $bookID);
 
 }
 
@@ -39,5 +39,5 @@ $statement->execute(); // run on the db server
 $statement->closeCursor(); // close the connection
 
 // redirect to index page
-//header('Location: index.php');
+header('Location: index.php');
 ?>
