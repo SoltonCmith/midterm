@@ -39,8 +39,6 @@ $statement->closeCursor(); // close the connection
                     <th>Author</th>
                     <th>Price</th>
                     <th>Genre</th>
-                    <th></th>
-                    <th></th>
                 </tr>
                     <?php foreach($books as $book) : ?>
                         <tr>
@@ -53,9 +51,8 @@ $statement->closeCursor(); // close the connection
                             <!-- MODIFY SECTION BELOW -->
                             <!-- //////////////////// -->
 
-                            <td><a class="btn btn-primary" href="book_details.php"> <i class="fa fa-plus"></i> EDIT</a></td>
-
-                            <td><a class="btn btn-primary" href="book_delete.php"> DELETE</a></td>
+                            <td><a class="btn btn-primary" href="book_details.php?bookID=<?php echo $book['Id']?>"> <i class="fa fa-plus"></i> EDIT</a></td>
+                            <td><a class="btn btn-danger" href="book_delete.php?bookID"<?php echo $book['Id']?> DELETE</a></td>
                         </tr>
                     <?php endforeach; ?>
             </table>
