@@ -1,11 +1,16 @@
 <?php
 include_once('database.php');
 
-/*//////////////////////*/
-/* YOUR CODE GOES HERE */
-/*/////////////////////*/
+$bookID = $_GET["bookID"];
 
-// redirect to index page
+if($bookID != false) {
+    $query = "DELETE FROM books WHERE Id = :book_id ";
+    $statement = $db->prepare($query);
+    $statement->bindValue(":book_id", $bookID);
+    $success = $statement->execute();
+    $statement->closeCursor();
+}
+
 header('Location: index.php');
 
 ?>
