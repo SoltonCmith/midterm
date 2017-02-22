@@ -10,11 +10,7 @@ $bookGenre = filter_input(INPUT_POST, "GenreTextField");
 // check if user is Adding a New Book
 if($isAddition == "1") {
 
-/*//////////////////////*/
-/* FIX THIS MYSQL QUERY */
-/*//////////////////////*/
-
-$query = "";
+$query = "INSERT INTO books (Title, Cost) VALUES (:book_name, :book_cost)";
 $statement = $db->prepare($query); // encapsulate the sql statement
 }
 // else if user is Updating an Existing Book
@@ -25,7 +21,7 @@ $bookID = filter_input(INPUT_POST, "IDTextField");
 /* FIX THIS MYSQL QUERY */
 /*//////////////////////*/
 
-$query = "";
+$query = "UPDATE books SET Name = :book_name, Cost = :book_cost WHERE Id = :book_id ";
 $statement = $db->prepare($query); // encapsulate the sql statement
 $statement->bindValue(':book_id', $bookID);
 
